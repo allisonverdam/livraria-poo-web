@@ -14,7 +14,7 @@
 	<br>
 	<br>
 	Lista de Clientes:
-	<table cellpadding="5" cellspacing="0" border="1">
+	<table border="1">
 		<tr>
 			<td>Opções</td>
 			<td>Id</td>

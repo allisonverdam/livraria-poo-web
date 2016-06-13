@@ -32,14 +32,6 @@ public class Compra {
 		super();
 	}
 
-	public Livro getLivro(Cliente cliente, Livro livro) {
-		return livro;
-	}
-
-	public void setLivro(Livro livro) {
-		this.livro = livro;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -55,4 +47,14 @@ public class Compra {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
+
+	public Livro getLivro() {
+		return livro;
+	}
+
+	public void setLivro(Livro livro) {
+		this.livro = livro;
+	}
+	
+
 }

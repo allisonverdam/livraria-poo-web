@@ -16,7 +16,7 @@
 	<br>
 	<br>
 	Lista de Livros:
-	<table cellpadding="5" cellspacing="0" border="1">
+	<table border="1">
 		<tr>
 			<td>Opções</td>
 			<td>ID</td>

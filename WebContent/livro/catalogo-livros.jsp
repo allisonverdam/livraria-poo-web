@@ -14,7 +14,7 @@
 <jsp:useBean id="cliente" class="modelo.dominio.Cliente" scope="request"></jsp:useBean>
 	<br>
 	<br> Lista de Livro:
-	<table cellpadding="5" cellspacing="0" border="1">
+	<table border="1">
 		<tr>
 			<td>Opções</td>
 			<td>Nome</td>

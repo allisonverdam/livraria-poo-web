@@ -34,8 +34,9 @@ public class ServletExibirMeusLivros extends HttpServlet {
 		
 		HttpSession session = request.getSession(true);
 		Cliente cliente = (Cliente) session.getAttribute("usuario");
-
+		
 		request.setAttribute("cliente", cliente);
+		request.setAttribute("compras", cliente.getCompra());
 		
 		request.getRequestDispatcher("livro/meus-livros.jsp").forward(request, response);
 	}
