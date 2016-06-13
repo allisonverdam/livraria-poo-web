@@ -11,4 +11,5 @@
 ### Como usar
 
 * Para usar o sistema você tem que executar o servidor Tomcat, após fazer isso é só acessar pelo seu browser o endereço: [http://localhost:8080/livraria](http://localhost:8080/livraria).
-* O primeiro usuário de administrador(gerente) você tem que criar direto no banco de dados, depois que você criar ele poderá criar outros diretamente pelo site.
+* Para o sistema gerar as tabelas no banco de dados é só você acessar o site e criar uma conta.
+* O primeiro usuário de administrador(gerente) você tem que criar direto no banco de dados, mas primeiro registre uma conta normal pelo site para gerar as tabelas no banco de dados, depois que você criar o administrador no banco é só você logar com ele no site que poderá criar outros.
