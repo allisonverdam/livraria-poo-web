@@ -11,6 +11,8 @@ import javax.servlet.http.HttpSession;
 
 import modelo.dao.ClienteDAO;
 import modelo.dao.GerenteDAO;
+import modelo.dominio.Cliente;
+import modelo.dominio.Gerente;
 
 /**
  * Servlet implementation class ServletAutenticar
@@ -41,39 +43,52 @@ public class ServletAutenticarUsuario extends HttpServlet {
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		
+		Cliente cliente = null;
+		Gerente gerente = null;
 		Object user = null;
 		
 		if(!login.equals("") && login != null){
 			ClienteDAO clienteDao = new ClienteDAO();
 			user = clienteDao.obterPorLogin(login);
+			cliente = (Cliente) user;
 			
 			if (user == null){				
 				GerenteDAO gerenteDao = new GerenteDAO();
 				user = gerenteDao.obterPorLogin(login);
-			}
+				gerente = (Gerente) user;
+			}	
 		}
 		
 		if (user == null){
 			request.setAttribute("mensagem", "Usuário não existe.");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
-		
-		if (senha != "" && senha != null){
+
+			if(user.getClass().getSimpleName().equals("Gerente")) {			
+				if (senha.equals(gerente.getSenha())){
+					
+					HttpSession session = request.getSession(true);
+					session.setAttribute("usuario", gerente);
+					request.getRequestDispatcher("gerente/menu.jsp").forward(request, response);
+	
+				}else{
+					request.setAttribute("mensagem", "Login ou Senha inválida.");
+					request.getRequestDispatcher("login.jsp").forward(request, response);
+				}
 			
-			HttpSession session = request.getSession(true);
-			session.setAttribute("usuario", user);
-			
-			if (user.getClass().getSimpleName().equals("Gerente")) {				
-				request.getRequestDispatcher("gerente/menu.jsp").forward(request, response);
-			} else {
-				request.getRequestDispatcher("cliente/menu.jsp").forward(request, response);
+			}else{
+					if (senha.equals(cliente.getSenha())){
+					
+					HttpSession session = request.getSession(true);
+					session.setAttribute("usuario", cliente);
+					request.getRequestDispatcher("cliente/menu.jsp").forward(request, response);
+	
+				}else{
+					request.setAttribute("mensagem", "Login ou Senha inválida.");
+					request.getRequestDispatcher("login.jsp").forward(request, response);
+				}
 			}
 		}
-		else{
-			request.setAttribute("mensagem", "Login ou Senha inválida.");
-			request.getRequestDispatcher("login.jsp").forward(request, response);
-		}
-	}
 }
 
 
