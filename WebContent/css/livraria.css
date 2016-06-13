@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+
+body{
+	background-color: rgba(144, 11, 11, 0.99);
+}
+.container{
+	text-align: center;
+}
+
+.input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+.caixa-group{
+	max-width: 500px;
+    background-color: #fff;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    margin: 0 auto;
+}
+
+.form-group{
+	padding-top: 10px;
+	margin: 0 auto;
+    width: 80%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn{
+	display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+}
+
+.btn-vermelho{
+	color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #da4f49;
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.btn-cinza{
+	color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #464646;
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.center{
+	text-align: center;
+	margin: auto;
+}
