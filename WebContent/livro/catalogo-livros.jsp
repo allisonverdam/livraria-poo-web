@@ -1,6 +1,6 @@
-<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@page import="modelo.dominio.Livro"%>
 <%@page import="modelo.dominio.Cliente"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@page import="java.util.List"%>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -11,6 +11,7 @@
 <title>Cadastro de Livro</title>
 </head>
 <body>
+<jsp:useBean id="cliente" class="modelo.dominio.Cliente" scope="request"></jsp:useBean>
 	<br>
 	<br> Lista de Livro:
 	<table cellpadding="5" cellspacing="0" border="1">
@@ -23,7 +24,7 @@
 			<td>Preço</td>
 		</tr>
 		<%
-			Cliente cliente = (Cliente) request.getAttribute("cliente");
+			cliente = (Cliente) request.getAttribute("cliente");;
 			List<Livro> lista = (List<Livro>) request.getAttribute("lista");
 			if (lista != null) {
 				for (Livro livro : lista) {

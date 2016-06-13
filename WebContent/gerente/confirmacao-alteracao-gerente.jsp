@@ -8,12 +8,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Confirmação de Alteracao de Gerente</title>
 
-<style type="text/css">
-.tituloCampo {
-	text-align: right;
-	color: blue;
-}
-</style>
 </head>
 <body>
 <a href="exibirCadastroGerentes">Voltar para o cadastro de Gerentes</a>
@@ -23,11 +17,11 @@
 <jsp:useBean id="gerente" class="modelo.dominio.Gerente" scope="request"></jsp:useBean>
 	<table>
 		<tr>
-			<td class="tituloCampo">Login:</td>
+			<td>Login:</td>
 			<td><%=gerente.getLogin()%></td>
 		</tr>
 		<tr>
-			<td class="tituloCampo">Nome:</td>
+			<td>Nome:</td>
 			<td><%=gerente.getNome()%></td>
 		</tr>
 	</table>

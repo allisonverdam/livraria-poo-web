@@ -28,7 +28,7 @@ public class ClienteDAO extends JpaDAO<Cliente> {
 		try {
 			retorno = query.getSingleResult();
 		} catch (Exception e) {
-		//	retorno = null;
+//			retorno = null;
 		}
 		
 		return retorno;

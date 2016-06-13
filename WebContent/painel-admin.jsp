@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Locadora | JáFilmes</title>
+<title>Livraria</title>
 </head>
 <body>
 	<a href="exibirCadastroLivros">Cadastro Livros</a>

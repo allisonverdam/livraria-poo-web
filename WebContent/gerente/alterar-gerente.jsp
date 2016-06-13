@@ -6,27 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Alteração em Gerente</title>
 
-<style type="text/css">
-.tituloCampo {
-	text-align: right;
-	color: blue;
-}
-</style>
-
 <script type="text/javascript">
 function validar()
 {
 	var f = document.forms[0];
 	if (f.nome.value == '')
 	{
-		alert('O campo NOME não foi preenchido.');
+		alert('O campo nome não foi preenchido.');
 		f.nome.focus();
-		return false;
-	}
-	else if (f.cpf.value == '')
-	{
-		alert('O campo CPF não foi preenchido.');
-		f.cpf.focus();
 		return false;
 	}
 	return true;
@@ -43,15 +30,15 @@ function validar()
 	<form action="alterarGerente" method="post" onsubmit="return validar()">
 		<table>
 			<tr>
-				<td class="tituloCampo">Id:</td>
+				<td>Id:</td>
 				<td><input type="text" name="id" value='<jsp:getProperty property="id" name="gerente"/>' size="30" maxlength="80"></td>
 			</tr>
 			<tr>
-				<td class="tituloCampo">Login:</td>
+				<td>Login:</td>
 				<td><input type="text" name="login" value='<jsp:getProperty property="login" name="gerente"/>' size="30" maxlength="80"></td>
 			</tr>
 			<tr>
-				<td class="tituloCampo">Nome:</td>
+				<td>Nome:</td>
 				<td><input type="text" name="nome" value='<jsp:getProperty property="nome" name="gerente"/>' size="11" maxlength="11"></td>
 			</tr>
 			<tr>
@@ -60,7 +47,6 @@ function validar()
 			</tr>
 		</table>
 	</form>
-	<a href="exibirPainelAdmin">Voltar a Página de Administração</a>
 	<a href="exibirPainelAdmin">Voltar a Página de Administração</a>
 	<br>
 	<br>

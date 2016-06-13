@@ -10,11 +10,11 @@
 	function validar() {
 		var f = document.forms[0];
 		if (f.login.value == '') {
-			alert('O campo LOGIN não foi preenchido.');
+			alert('O campo login não foi preenchido.');
 			f.login.focus();
 			return false;
 		} else if (f.senha.value == '') {
-			alert('O campo SENHA não foi preenchido.');
+			alert('O campo senha não foi preenchido.');
 			f.senha.focus();
 			return false;
 		}

@@ -11,9 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import modelo.dao.ClienteDAO;
-import modelo.dao.GerenteDAO;
 import modelo.dominio.Cliente;
-import modelo.dominio.Gerente;
 
 /**
  * Servlet implementation class ServletRegistrarUsuario
@@ -61,14 +59,6 @@ public class ServletSalvarUsuario extends HttpServlet {
 				dadosOK = false;
 				mensagem = "Já temos um cliente com esse login!";
 			}
-		
-			GerenteDAO gerenteDao = new GerenteDAO();
-			Gerente gerente = gerenteDao.obterPorLogin(login);
-			
-			if (gerente != null) {
-				dadosOK = false;
-				mensagem = "Já temos um gerente com esse login!";
-			}
 		}
 				
 		if (!senha.equals(senhaConf)) {
@@ -84,9 +74,9 @@ public class ServletSalvarUsuario extends HttpServlet {
 				
 				pagina = "cliente/confirmacao-registro-cliente.jsp";
 				ClienteDAO dao = new ClienteDAO();
-				dao.salvar(cliente);
-				request.setAttribute("cliente", cliente);
-				session.setAttribute("usuario", cliente);
+				Cliente novo = dao.salvar(cliente);
+				request.setAttribute("cliente", novo);
+				session.setAttribute("usuario", novo);
 		}
 		else{
 			pagina = "registrar.jsp";

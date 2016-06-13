@@ -13,7 +13,7 @@
     <description></description>
     <display-name>ServletExibirPainelGerencia</display-name>
     <servlet-name>ServletExibirPainelGerencia</servlet-name>
-    <servlet-class>controle.ServletSalvarFilme</servlet-class>
+    <servlet-class>controle.ServletSalvarLivro</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ServletExibirPainelGerencia</servlet-name>

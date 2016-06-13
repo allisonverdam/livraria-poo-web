@@ -58,6 +58,6 @@ public class ServletAtualizarCliente extends HttpServlet {
 		clienteDao.alterar(cliente);
 		request.setAttribute("cliente", cliente);
 		
-		request.getRequestDispatcher("cliente/confirmacao-alteracao-cliente.jsp").forward(request, response);
+		request.getRequestDispatcher("cliente/confirmacao-atualizacao-cliente.jsp").forward(request, response);
 	}
 }

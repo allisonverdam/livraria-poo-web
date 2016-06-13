@@ -13,7 +13,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "clientes")
+@Table(name="clientes")
 public class Cliente {
 	
 	@Id
@@ -29,6 +29,14 @@ public class Cliente {
 	
     @OneToMany(mappedBy="cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Compra> compra;
+    
+	public Cliente(String login, String senha, String nome, boolean admin) {
+		super();
+		this.login = login;
+		this.senha = senha;
+		this.nome = nome;
+		this.admin = admin;
+	}
 	
 	public Cliente() {
 		super();

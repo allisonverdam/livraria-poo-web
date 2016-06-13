@@ -8,25 +8,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Confirmação de Registro</title>
 
-<style type="text/css">
-.tituloCampo {
-	text-align: right;
-	color: blue;
-}
-</style>
 </head>
 <body>
 <jsp:useBean id="cliente" class="modelo.dominio.Cliente" scope="request"></jsp:useBean>
 	<table>
 		<tr>
-			<td class="tituloCampo">Nome:</td>
+			<td>Nome:</td>
 			<td><%=cliente.getNome()%></td>
 		</tr>
 	</table>
-	<p class="tituloCampo">Seja Bem-Vindo <%=cliente.getNome()%>.</p>
+	<p>Seja Bem-Vindo <%=cliente.getNome()%>.</p>
 	<br>
 	<br>
-	<a href="exibirCatalogo">Exibir Catalogo</a>
+	<a>Exibir Catalogo</a>
 	<a href="exibirPainelAdmin">Voltar a Página de Administração</a>
 	<br>
 	<br>

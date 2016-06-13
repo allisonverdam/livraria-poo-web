@@ -43,8 +43,8 @@ public class ServletAutenticarUsuario extends HttpServlet {
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		
-		Cliente cliente = null;
-		Gerente gerente = null;
+		Cliente cliente = new Cliente();
+		Gerente gerente = new Gerente();
 		Object user = null;
 		
 		if(!login.equals("") && login != null){
